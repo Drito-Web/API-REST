@@ -36,6 +36,22 @@ app.get('/products/:id', (req, res) => {
 
 } )
 
+// GET: parámetros query
+app.get('/users', (req, res) => {
+
+  const { limit, offset } = req.query;
+
+  if (limit && offset) {
+    res.json({
+      limit,
+      offset
+    });
+  } else {
+    res.send("No hay params")
+  }
+
+})
+
 app.get('/categories/:categoriesId/products/:productsId', (req, res) => {
 
   const { categoriesId, productsId } = req.params;

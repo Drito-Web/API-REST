@@ -32,3 +32,8 @@ PATCH      No Apply       Update
 POST       Create         No Apply
 
 DELETE     delete*        Delete
+
+
+instalar una ependencia para crear datos fake
+
+npm i faker
