@@ -19,3 +19,16 @@ npm i express
 paso 1 requerir a express
 paso 2 
 paso 3  
+
+
+Method  |  /products  |  /products/{id}
+
+GET        Get list       Get
+
+PUT        Replace*        Update/Replace 
+
+PATCH      No Apply       Update
+
+POST       Create         No Apply
+
+DELETE     delete*        Delete
