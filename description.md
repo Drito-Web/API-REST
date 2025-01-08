@@ -36,4 +36,4 @@ DELETE     delete*        Delete
 
 instalar una ependencia para crear datos fake
 
-npm i faker
+npm i @faker-js/faker
