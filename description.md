@@ -17,15 +17,15 @@ instalar express como una deendencia de produccion
 npm i express
 
 paso 1 requerir a express
-paso 2 
-paso 3  
+paso 2 llamar su metodo
+paso 3 escuchar en el puerto selecionado
 
 
 Method  |  /products  |  /products/{id}
 
 GET        Get list       Get
 
-PUT        Replace*        Update/Replace 
+PUT        Replace*       Update/Replace 
 
 PATCH      No Apply       Update
 
