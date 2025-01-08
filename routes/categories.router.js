@@ -1,13 +1,16 @@
-// const express = require('express')
+const express = require('express')
 
+const router = express.Router();
 
-// app.get('/categories/:categoriesId/products/:productsId', (req, res) => {
+router.get('/categories/:categoriesId/products/:productsId', (req, res) => {
 
-//   const { categoriesId, productsId } = req.params;
+  const { categoriesId, productsId } = req.params;
 
-//   res.json({
-//     categoriesId,
-//     productsId
-//   });
+  res.json({
+    categoriesId,
+    productsId
+  });
 
-// })
+})
+
+module.exports = router;
