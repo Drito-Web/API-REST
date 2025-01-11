@@ -5,7 +5,7 @@ const routerApi = require('./routes');
 const app = express();
 const port = 3000;
 
-app.use(express.json());
+app.use(express.json());//para recibir en json
 
 app.get('/', (req, res) => {
   res.send("server Express funcionando")
@@ -24,8 +24,4 @@ routerApi(app);
 
 
 
-app.listen(port, ()=> {
-
-  console.log("Server running port:", port);
-
-})
+app.listen(port, ()=> {console.log("Server running port:", port)});
