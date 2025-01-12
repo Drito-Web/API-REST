@@ -1,15 +1,17 @@
-const { stack } = require("../routes/categories.router");
+// const { stack } = require("../routes/categories.router");
 
 function loadError(err, req, res, next) {
+  console.log('loadError', err);
   console.error(err);
   next(err);
 
 }
 
-const errorHandler = (err, req, res, next) => {
+function errorHandler(err, req, res, next) {
+  console.log('errorHandler', err);
   res.status(500).json({
-    message: err.message,
-    stack: err.stack,
+    message:err.message,
+    stack:err.stack,
   });
 };
 
