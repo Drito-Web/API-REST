@@ -1,5 +1,3 @@
-// const { stack } = require("../routes/categories.router");
-
 function loadError(err, req, res, next) {
   console.log('loadError');
   console.error(err);
@@ -10,8 +8,8 @@ function loadError(err, req, res, next) {
 function errorHandler(err, req, res, next) {
   console.log('errorHandler');
   res.status(500).json({
-    message:err.message,
-    stack:err.stack,
+    message: err.message,
+    stack: err.stack,
   });
 };
 
@@ -22,6 +20,6 @@ if (err.isBoom) {
  } else {
    next(err);
  }
-};
+}
 
 module.exports = { loadError, errorHandler, boomErrorHandler };
