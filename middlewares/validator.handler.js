@@ -1,7 +1,7 @@
 const boom = require('@hapi/boom');
 
-const validatorHamdler = (schema, property) => {
-  return function(req, res, next) {
+function validatorHamdler(schema, property) {
+  return (req, res, next) => {
     const data = req[property];
     const { error } = schema.validate(data);
 
