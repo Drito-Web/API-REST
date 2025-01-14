@@ -8,8 +8,8 @@ class ProductsService {
     this.generate();
   }
 
-  async generate() {
-    const limit = 100;
+  generate() {
+    const limit = 10;
     for (let index = 0; index < limit; index++) {
       this.products.push({
         id: faker.datatype.uuid(),
