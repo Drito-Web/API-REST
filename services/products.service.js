@@ -2,7 +2,7 @@ const faker = require('faker');
 const boom = require('@hapi/boom');
 
 
-class productsService {
+class ProductsService {
   constructor() {
     this.products = [];
     this.generate();
@@ -30,9 +30,12 @@ class productsService {
     return newProduct;
   }
 
-  async find() {
-    return this.products;
-
+ async find() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(this.products);
+      }, 3000);
+    });
   }
 
   async findOne(id) {
@@ -70,4 +73,4 @@ class productsService {
 }
 
 
-module.exports = productsService;
+module.exports = ProductsService;
