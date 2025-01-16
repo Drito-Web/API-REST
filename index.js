@@ -8,7 +8,19 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.use(cors());
+
+
+const whitelist = ['http://localhost:5500', 'https://myapp.com', 'http://localhost:8080'];
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (whitelist.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}
+app.use(cors(corsOptions));
 
 app.get('/', (req, res) => {
   res.send("server Express funcionando")
